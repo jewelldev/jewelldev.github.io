@@ -12,22 +12,22 @@ Variables
 */
 
 :root {
-  --budlight-primary: #061148;
-  --budlight-secondary: #00A1E1;
+  --budlight-primary: hsl(230, 85%, 15%);
+  --budlight-secondary: #00a1e1;
 
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
+  --clr-primary-1: hsl(230, 86%, 17%);
+  --clr-primary-2: hsl(230, 77%, 27%);
+  --clr-primary-3: hsl(230, 72%, 37%);
+  --clr-primary-4: hsl(230, 63%, 48%);
   /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
+  --clr-primary-5: hsl(230, 78%, 60%);
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
+  --clr-primary-6: hsl(230, 89%, 70%);
+  --clr-primary-7: hsl(230, 90%, 76%);
+  --clr-primary-8: hsl(230, 86%, 81%);
+  --clr-primary-9: hsl(230, 90%, 88%);
+  --clr-primary-10: hsl(230, 100%, 96%);
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
@@ -161,7 +161,7 @@ Nav
 */
 nav {
   background: var(--clr-white);
-  height: 6rem;
+  height: 12rem;
   display: grid;
   align-items: center;
   box-shadow: var(--dark-shadow);
@@ -174,15 +174,19 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-.nav-center h2 {
-  margin-bottom: 0;
-  color: var(--budlight-primary);
-  text-transform: lowercase;
-  letter-spacing: 1px;
-  font-weight: 600;
-  border: 3px solid var(--budlight-secondary);
-  padding: 0.2rem 1rem;
-  border-radius: var(--radius);
+
+.nav-links {
+  display: flex;
+}
+nav a {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--clr-primary-1);
+  letter-spacing: var(--spacing);
+  margin-right: 1rem;
+}
+nav a:hover {
+  color: var(--clr-primary-5);
 }
 
 /*
@@ -191,7 +195,7 @@ Container
 ===============
 */
 main {
-  min-height: calc(100vh - 3rem);
+  min-height: calc(100vh - 12rem);
   display: grid;
   place-items: center;
 }
@@ -204,4 +208,20 @@ main {
   padding: 1rem;
   border-radius: var(--radius);
   margin-bottom: 2.5rem;
+}
+
+/*
+=============== 
+logo
+===============
+*/
+#logo {
+  margin: 0;
+  color: var(--budlight-primary);
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border: 6px solid var(--budlight-secondary);
+  padding: 0.3rem 1rem 0.7rem 1rem;
+  border-radius: var(--radius);
 }
